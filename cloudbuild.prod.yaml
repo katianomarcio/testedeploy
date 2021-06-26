@@ -1,9 +1,9 @@
 steps:
   - id: Building image
-    name: grc.io/cloud-builders/docker
-    args: ['buid','-t', 'grc.io/$PROJECT_ID/myage:$SHORT_SHA','-f', 'Dockerfile','.']
+    name: gcr.io/cloud-builders/docker
+    args: ['buid','-t', 'gcr.io/$PROJECT_ID/myage:$SHORT_SHA','-f', 'Dockerfile','.']
 
 
   - id: Pushing Image
-    name: grc.io/cloud-builders/docker 
-    args: ['push', 'grc.io/$PROJECT_ID/myage:$SHORT_SHA']
+    name: gcr.io/cloud-builders/docker 
+    args: ['push', 'gcr.io/$PROJECT_ID/myage:$SHORT_SHA']
