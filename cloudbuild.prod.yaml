@@ -1,9 +1,9 @@
 steps:
   - id: Building image
-    name: testenomebuild
-    args: ['buid','-t', 'gcr.io/$PROJECT_ID/myage:$SHORT_SHA','-f', 'Dockerfile','.']
+    name: gcr.io/cloud-builders/docker
+    args: ['buid','-t', 'gcr.io/$PROJECT_ID/myage:testedebuild1','-f', 'Dockerfile','.']
 
 
   - id: Pushing Image
     name: gcr.io/cloud-builders/docker 
-    args: ['push', 'gcr.io/$PROJECT_ID/myage:$SHORT_SHA']
+    args: ['push', 'gcr.io/$PROJECT_ID/myage:testedebuild1']
